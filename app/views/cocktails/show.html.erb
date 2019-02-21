@@ -2,4 +2,4 @@
 <% @cocktail.doses.each do |dose| %>
   <p><%= "#{dose.ingredient.name} - #{dose.description}" %></p>
 <% end %>
-<%= link_to 'New Ingredient', new_cocktail_dose_path(@cocktail)%>
+<%= render 'doses/form', object: @dose %>
