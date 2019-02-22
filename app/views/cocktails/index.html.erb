@@ -1,4 +1,4 @@
-<p><%= link_to 'New Cocktail', new_cocktail_path %></p>
+<p><%= link_to 'New Cocktail', new_cocktail_path, { class: "btn btn-primary" }%></p>
 <div class="cocktails-list">
   <% @cocktails.each do |cocktail| %>
     <div class="cocktail-card card col-xs-12, col-md-6, col-lg-3">
