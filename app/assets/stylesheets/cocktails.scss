@@ -12,5 +12,41 @@
   margin: 5px 0;
 }
 .cocktail-info{
-  height: 50vh;
+}
+.cocktails-list{
+  display: flex;
+  margin: 25px 0;
+}
+.cocktail-description{
+  height: 350px;
+}
+.cocktail-ingredient-form{
+  height: 350px;
+}
+.cocktail-list-name h4{
+  margin: 0px;
+}
+.cocktail-list-image{
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+.card-container{
+  display: flex;
+}
+#btn-add-cocktail{
+  margin-bottom: 50px;
+  margin-left: 15px;
+}
+#btn-edit-cocktail{
+  margin-bottom: 50px;
+  margin-left: 15px;
+}
+#btn-delete-cocktail{
+  margin-bottom: 50px;
+  margin-left: 15px;
+}
+.ingredient-container{
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,14 +1,28 @@
-<p><%= link_to 'New Cocktail', new_cocktail_path, { class: "btn btn-primary" }%></p>
-<div class="cocktails-list">
-  <% @cocktails.each do |cocktail| %>
-    <div class="cocktail-card card col-xs-12, col-md-6, col-lg-3">
-      <div class="cocktail">
-        <div class="cocktail-name">
-          <h3><%=
-            link_to cocktail.name, cocktail_path(cocktail.id)
-          %></h3>
+<div class="banner" id="front-page" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 50%), url(<%= asset_path 'header.jpg' %>);">
+  <div class="banner-content">
+    <h1>Cocktails Repo</h1>
+    <p>Best cocktails in the world</p>
+  </div>
+</div>
+<div class="container">
+  <div class="cocktails-list">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-container col-xs-12, col-md-6, col-lg-3">
+        <div class="cocktail">
+          <div class="cocktail-list-image" style="background-image: url('<%= cl_image_path cocktail.photo %>')"></div>
+          <div class="card">
+            <div class="cocktail-list-name">
+              <h4><%=link_to cocktail.name, cocktail_path(cocktail.id) %></h4>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
+<div class="container">
+  <div class="full-with">
+    <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary", id: "btn-add-cocktail" %>
+  </div>
+</div>
+
